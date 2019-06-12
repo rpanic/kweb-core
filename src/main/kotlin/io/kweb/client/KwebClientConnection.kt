@@ -1,4 +1,4 @@
-package io.kweb.browserConnection
+package io.kweb.client
 
 import io.ktor.http.cio.websocket.*
 import io.ktor.http.cio.websocket.Frame.Text

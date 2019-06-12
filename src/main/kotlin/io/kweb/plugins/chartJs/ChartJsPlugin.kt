@@ -6,7 +6,9 @@ import io.kweb.dom.element.new
 import io.kweb.plugins.KwebPlugin
 import io.kweb.plugins.chartJs.ChartType.line
 
-fun main(args: Array<String>) {
+// TODO: Mostly a demo, incomplete
+
+fun main() {
     Kweb(port = 5252, plugins = listOf(chartJs)) {
         doc.body.new {
             Chart(canvas(400, 300), ChartConfig(

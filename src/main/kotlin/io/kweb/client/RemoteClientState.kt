@@ -1,7 +1,6 @@
 package io.kweb.client
 
 import io.kweb.DebugInfo
-import io.kweb.browserConnection.KwebClientConnection
 import io.kweb.gson
 import java.time.Instant
 import java.util.HashMap

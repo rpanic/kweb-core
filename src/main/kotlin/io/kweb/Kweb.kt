@@ -13,8 +13,8 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.jetty.*
 import io.ktor.websocket.*
 import io.kweb.client.Server2ClientMessage.Instruction
-import io.kweb.browserConnection.KwebClientConnection
-import io.kweb.browserConnection.KwebClientConnection.Caching
+import io.kweb.client.KwebClientConnection
+import io.kweb.client.KwebClientConnection.Caching
 import io.kweb.client.*
 import io.kweb.plugins.KwebPlugin
 import kotlinx.coroutines.*
