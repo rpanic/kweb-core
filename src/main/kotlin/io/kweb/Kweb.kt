@@ -323,6 +323,14 @@ class Kweb(val port: Int,
         return jsList
     }
 
+    fun execute(clientId : String, functionJS : String, arguments : List<Any>) {
+        execute<Unit>(clientId, functionJS, arguments, null)
+    }
+
+    fun <R : Any> execute(clientId : String, functionJS : String, arguments : List<Any>, once : Boolean = true, callback : ((R) -> Unit)?) {
+
+    }
+
     fun execute(clientId: String, javascript: String) {
         val wsClientData = clientState.get(clientId) ?: throw RuntimeException("Client id $clientId not found")
         wsClientData.lastModified = Instant.now()

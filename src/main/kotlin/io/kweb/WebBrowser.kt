@@ -21,7 +21,7 @@ val logger = KotlinLogging.logger {}
 
 class WebBrowser(private val sessionId: String, val httpRequestInfo: HttpRequestInfo, internal val kweb: Kweb) {
 
-    val idCounter = AtomicInteger(0)
+    private val idCounter = AtomicInteger(0)
 
     fun generateId() : String = idCounter.getAndIncrement().toString(36)
 

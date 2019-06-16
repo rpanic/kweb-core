@@ -85,7 +85,7 @@ open class Element(open val browser: WebBrowser, val creator: ElementCreator<*>?
     fun setAttribute(name: String, value: Any?): Element {
         if (value != null) {
             if (canSendInstruction()) {
-                browser.send(Instruction(type = SetAttribute, parameters = listOf(id, name, value)))
+                browser.send(Instruction(type = SetAttribute, arguments = listOf(id, name, value)))
             } else {
                 execute("$jsExpression.setAttribute(\"${name.escapeEcma()}\", ${value.toJson()});")
             }
