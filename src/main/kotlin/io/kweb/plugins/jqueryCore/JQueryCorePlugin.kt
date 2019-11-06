@@ -17,7 +17,6 @@ class JQueryCorePlugin : KwebPlugin(dependsOn = setOf(StaticFilesPlugin(Resource
         startHead.appendln("""
         <script
                 src="$resourceRoute/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>""".trimIndent()
         )
     }
