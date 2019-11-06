@@ -5,13 +5,12 @@ import io.kweb.plugins.KwebPlugin
 /**
  * Created by ian on 1/9/17.
  */
-class JQueryCorePlugin : KwebPlugin() {
+class JQueryCorePlugin : KwebPlugin(dependsOn = setOf(StaticFilesPlugin(ResourceFolder(resourceFolder), resourceRoute))) {
     override fun decorate(startHead: StringBuilder, endHead: StringBuilder) {
         // Include the plugin, this is straight from the JQuery documentation
         startHead.appendln("""
         <script
-                src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+                src="$resourceRoute/jquery-3.1.1.min.js"
         crossorigin="anonymous"></script>""".trimIndent()
         )
     }
